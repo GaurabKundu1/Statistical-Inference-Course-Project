@@ -55,3 +55,26 @@ Calculate the mean of the simulated exponentials.
 meanExp <- apply(simExp, 2, mean)
 ```
 
+### Question 1: Sample Mean Versus Theoretical Mean
+
+Calculate and compare the sample mean to the theoretical mean. The mean of the exponential distribution is equal to 1/lambda. In our case, lambda is equal to 0.2. Thus, the theoretical mean should be approximately 5.
+
+```{r}
+sampMean <- mean(meanExp)
+sampMean
+```
+
+```{r}
+theoMean <- 1/lambda
+theoMean
+```
+
+The below figure depicts a histogram of the simulated exponential sample means. The red vertical line indicates the sample mean and the blue vertical line indicates the theoretical mean.
+
+```{r}
+hist(meanExp, main = "Simulated Exponential Sample Means", col = "yellow", breaks = 100)
+abline(v = sampMean, col = "red")
+abline(v = theoMean, col = "blue")
+```
+
+The R code above shows that the sample mean is equal to 4.974 which is very close to the theoretical mean of 5.
