@@ -9,4 +9,10 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Part 2: Basic Inferential Data Analysis Instructions
 
+## Overview
+
+In this second part, we perform basic inferential analyses using the ToothGrowth data in the R datasets package.
+
+As per the help file of this dataset, the response is the length of odontoblasts (teeth) in each of 10 guinea pigs at each of three dose levels of Vitamin C (0.5, 1, and 2 mg) with each of two delivery methods (orange juice or ascorbic acid).
