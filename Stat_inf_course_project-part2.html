@@ -382,6 +382,50 @@ odontoblasts (teeth) in each of 10 guinea pigs at each of three dose
 levels of Vitamin C (0.5, 1, and 2 mg) with each of two delivery methods
 (orange juice or ascorbic acid).</p>
 </div>
+<div id="load-necessary-libraries" class="section level2">
+<h2>Load Necessary Libraries</h2>
+<pre class="r"><code>library(ggplot2)</code></pre>
+</div>
+<div id="load-the-toothgrowth-data-and-perform-some-basic-exploratory-data-analyses." class="section level2">
+<h2>Load the ToothGrowth data and perform some basic exploratory data
+analyses.</h2>
+<pre class="r"><code># load the dataset
+library(datasets)
+data(ToothGrowth)
+# look at the dataset variables
+str(ToothGrowth)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    60 obs. of  3 variables:
+##  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
+##  $ supp: Factor w/ 2 levels &quot;OJ&quot;,&quot;VC&quot;: 2 2 2 2 2 2 2 2 2 2 ...
+##  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...</code></pre>
+<pre class="r"><code># convert variable dose from numeric to factor
+ToothGrowth$dose &lt;- as.factor(ToothGrowth$dose)
+# look at the dataset variables after conversion
+str(ToothGrowth)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    60 obs. of  3 variables:
+##  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
+##  $ supp: Factor w/ 2 levels &quot;OJ&quot;,&quot;VC&quot;: 2 2 2 2 2 2 2 2 2 2 ...
+##  $ dose: Factor w/ 3 levels &quot;0.5&quot;,&quot;1&quot;,&quot;2&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+</div>
+<div id="provide-a-basic-summary-of-the-data." class="section level2">
+<h2>Provide a basic summary of the data.</h2>
+<pre class="r"><code># summary statistics for all variables
+summary(ToothGrowth)</code></pre>
+<pre><code>##       len        supp     dose   
+##  Min.   : 4.20   OJ:30   0.5:20  
+##  1st Qu.:13.07   VC:30   1  :20  
+##  Median :19.25           2  :20  
+##  Mean   :18.81                   
+##  3rd Qu.:25.27                   
+##  Max.   :33.90</code></pre>
+<pre class="r"><code># split of cases between different dose levels and delivery methods
+table(ToothGrowth$dose, ToothGrowth$supp)</code></pre>
+<pre><code>##      
+##       OJ VC
+##   0.5 10 10
+##   1   10 10
+##   2   10 10</code></pre>
+</div>
 </div>
 
 
