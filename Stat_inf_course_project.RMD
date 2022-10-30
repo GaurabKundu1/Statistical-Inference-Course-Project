@@ -1,5 +1,5 @@
 ---
-title: "Statistical Inference Course Project"
+title: "Statistical Inference Course Project Part 1"
 author: "Gaurab Kundu"
 date: "2022-10-28"
 output: html_document
