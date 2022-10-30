@@ -12,7 +12,9 @@ Illustrate via simulation and associated explanatory text the properties of the 
 
 3. Show that the distribution is approximately normal.
 
-## Part 2: Basic Inferential Data Analysis
+To see the document click here: https://rpubs.com/GaurabKundu01/963752
+
+## Part 2: [Basic Inferential Data Analysis](https://rpubs.com/GaurabKundu01/963753)
 
 Now in the second portion of the project, we're going to analyze the ToothGrowth data in the R datasets package.
 
@@ -23,3 +25,5 @@ Now in the second portion of the project, we're going to analyze the ToothGrowth
 3. Use confidence intervals and/or hypothesis tests to compare tooth growth by supp and dose.
 
 4. State your conclusions and the assumptions needed for your conclusions.
+
+To see the document click here: https://rpubs.com/GaurabKundu01/963753
