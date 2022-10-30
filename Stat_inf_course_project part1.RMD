@@ -3,7 +3,6 @@ title: "Statistical Inference Course Project Part 1"
 author: "Gaurab Kundu"
 date: "2022-10-28"
 output:
-  pdf_document: default
   html_document: default
 ---
 
@@ -57,7 +56,7 @@ Calculate the mean of the simulated exponentials.
 meanExp <- apply(simExp, 2, mean)
 ```
 
-### Question 1: Sample Mean Versus Theoretical Mean
+## Question 1: Sample Mean Versus Theoretical Mean
 
 Calculate and compare the sample mean to the theoretical mean. The mean of the exponential distribution is equal to 1/lambda. In our case, lambda is equal to 0.2. Thus, the theoretical mean should be approximately 5.
 

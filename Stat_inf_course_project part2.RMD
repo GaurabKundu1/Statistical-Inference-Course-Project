@@ -1,0 +1,12 @@
+---
+title: "Statistical Inference Course Project Part 2"
+author: "Gaurab Kundu"
+date: "2022-10-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
