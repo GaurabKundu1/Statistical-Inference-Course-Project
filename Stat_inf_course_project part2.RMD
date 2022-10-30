@@ -16,3 +16,39 @@ knitr::opts_chunk$set(echo = TRUE)
 In this second part, we perform basic inferential analyses using the ToothGrowth data in the R datasets package.
 
 As per the help file of this dataset, the response is the length of odontoblasts (teeth) in each of 10 guinea pigs at each of three dose levels of Vitamin C (0.5, 1, and 2 mg) with each of two delivery methods (orange juice or ascorbic acid).
+
+## Load Necessary Libraries
+
+```{r}
+library(ggplot2)
+```
+
+## Load the ToothGrowth data and perform some basic exploratory data analyses.
+
+```{r}
+# load the dataset
+library(datasets)
+data(ToothGrowth)
+# look at the dataset variables
+str(ToothGrowth)
+```
+
+```{r}
+# convert variable dose from numeric to factor
+ToothGrowth$dose <- as.factor(ToothGrowth$dose)
+# look at the dataset variables after conversion
+str(ToothGrowth)
+```
+
+## Provide a basic summary of the data.
+
+```{r}
+# summary statistics for all variables
+summary(ToothGrowth)
+```
+
+```{r}
+# split of cases between different dose levels and delivery methods
+table(ToothGrowth$dose, ToothGrowth$supp)
+```
+
