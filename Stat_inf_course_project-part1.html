@@ -398,6 +398,23 @@ the theoretical variance of the distribution.</p></li>
 of a large collection of random exponentials and the distribution of a
 large collection of averages of 40 exponentials.</p>
 </div>
+<div id="simulations" class="section level2">
+<h2>Simulations</h2>
+<p>It is good practice to set the seed of R’s random number generator
+before simulating random observations so that the simulations can be
+reproduced.</p>
+<pre class="r"><code>set.seed(1234)</code></pre>
+<p>Set the rate parameter (lambda) equal to 0.2, set the number of
+exponentials equal to 40, and set the number of simulations equal to
+1000 as instructed in the rubric.</p>
+<pre class="r"><code>lambda &lt;- 0.2
+n &lt;- 40
+sim &lt;- 1000</code></pre>
+<p>Simulate the 40 exponentials.</p>
+<pre class="r"><code>simExp &lt;- replicate(sim, rexp(n, lambda))</code></pre>
+<p>Calculate the mean of the simulated exponentials.</p>
+<pre class="r"><code>meanExp &lt;- apply(simExp, 2, mean)</code></pre>
+</div>
 </div>
 
 

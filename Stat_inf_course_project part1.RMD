@@ -27,6 +27,31 @@ I will iIllustrate via simulation and associated explanatory text the properties
 
 In point 3, I will focus on the difference between the distribution of a large collection of random exponentials and the distribution of a large collection of averages of 40 exponentials.
 
+## Simulations
 
+It is good practice to set the seed of R’s random number generator before simulating random observations so that the simulations can be reproduced.
 
+```{r}
+set.seed(1234)
+```
+
+Set the rate parameter (lambda) equal to 0.2, set the number of exponentials equal to 40, and set the number of simulations equal to 1000 as instructed in the rubric.
+
+```{r}
+lambda <- 0.2
+n <- 40
+sim <- 1000
+```
+
+Simulate the 40 exponentials.
+
+```{r}
+simExp <- replicate(sim, rexp(n, lambda))
+```
+
+Calculate the mean of the simulated exponentials.
+
+```{r}
+meanExp <- apply(simExp, 2, mean)
+```
 
