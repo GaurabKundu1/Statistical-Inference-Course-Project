@@ -96,3 +96,16 @@ theoVar
 ```
 
 The R code above shows that the sample variance is equal to 0.571 which is very close to the theoretical variance of 0.625.
+
+## Question 3: Distribution
+
+Finally, I’ll investigate whether the exponential distribution is approximately normal. Because of the Central Limit Theorem, the means of the sample simulations should follow a normal distribution.
+
+```{r}
+hist(meanExp, main = "Normal Distribution", col = "blue", breaks = 100)
+xfit <- seq(min(meanExp), max(meanExp), length = 100)
+yfit <- dnorm(xfit, mean = 1/lambda, sd = (1/lambda)/sqrt(n))
+lines(xfit, yfit*60, lty = 5)
+```
+
+As the above figure shows, the distribution of means of the sampled exponential distributions appear to follow a normal distribution. This is due to the Central Limit Theorem. It is noteworthy that increasing the number of samples from 1000, would cause the distribution to align even more closely to a normal distribution.
