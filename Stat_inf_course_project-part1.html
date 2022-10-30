@@ -437,6 +437,23 @@ abline(v = theoMean, col = &quot;blue&quot;)</code></pre>
 is very close to the theoretical mean of 5.</p>
 </div>
 </div>
+<div id="question-2-sample-variance-versus-theoretical-variance" class="section level2">
+<h2>Question 2: Sample Variance Versus Theoretical Variance</h2>
+<p>Calculate and compare the sample variance to the theoretical
+variance. The standard deviation of the exponential distribution is
+equal to (1/lambda)/sqrt(n). Square the standard deviation to calculate
+the variance.</p>
+<pre class="r"><code>sampSd &lt;- sd(meanExp)
+sampVar &lt;- sampSd^2
+sampVar</code></pre>
+<pre><code>## [1] 0.5706551</code></pre>
+<pre class="r"><code>theoSd &lt;- (1/lambda)/sqrt(n)
+theoVar &lt;- theoSd^2
+theoVar</code></pre>
+<pre><code>## [1] 0.625</code></pre>
+<p>The R code above shows that the sample variance is equal to 0.571
+which is very close to the theoretical variance of 0.625.</p>
+</div>
 </div>
 
 
